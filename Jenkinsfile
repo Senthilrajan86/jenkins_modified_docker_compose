@@ -3,11 +3,12 @@ pipeline {
     stages {
         stage("verification of the container"){
             steps {
+                sh'docker --version'
                 //sh '/usr/local/bin/docker-compose ps'
-                script {                
-                    sh'docker ps -q | xargs docker stop'
+                //script {                
+                    //sh'docker ps -q | xargs docker stop'
                     //sh '/usr/local/bin/docker-compose ps'
-                }
+                //}
             }
         }    
         stage('Docker Build') {
