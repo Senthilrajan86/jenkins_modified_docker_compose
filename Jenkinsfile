@@ -14,7 +14,7 @@ pipeline {
         stage('Docker Build') {
     	    agent any
             steps {
-      	        sh 'docker build -t bezkoder-ui + ":$BUILD_NUMBER".'
+      	        sh 'docker build -t bezkoder-ui ":$BUILD_NUMBER" .'
             }
         }
         stage('start container') {
