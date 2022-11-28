@@ -14,7 +14,7 @@ pipeline {
         stage('Docker Build') {
     	    agent any
             steps {
-      	        sh "docker build -t bezkoder-ui:$BUILD_NUMBER -f bezkoder-ui/Dockerfile ."
+      	        sh 'docker build -t bezkoder-ui:$BUILD_NUMBER -f bezkoder-ui/Dockerfile .'
                 //sh 'docker build -t bezkoder-ui":$BUILD_NUMBER" .'
             }
         }
